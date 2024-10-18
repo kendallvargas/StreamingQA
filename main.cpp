@@ -3,6 +3,7 @@
 #include <locale.h>
 #include <windows.h>
 #include <algorithm>
+#include <ctime>
 
 using namespace std;
 
@@ -24,15 +25,28 @@ void clearScreen()
 #endif
 }
 
+int RandomNumber(){
+// Providing a seed value
+	srand((unsigned) time(NULL));
+
+	// Get a random number
+	int random = rand();
+
+	// Print the random number
+	cout<<random<<endl;
+
+	return random;
+}
+
 int main()
 {
 
     SetConsoleCP(1252);
     SetConsoleOutputCP(1252);
     setlocale(LC_ALL,"Spanish");
-    int clientID = 0, menu = 0, totalWatchedHoursCalc = 0, totalStreamingConsumption = 0, totalWatchedHours = 0, fixedFee = 0, contentProtection = 0, first10 = 0, in11to40 = 0, in51to100 = 0, above100 = 0 ;
+    int invoice=0, clientID = 0, menu = 0, totalWatchedHoursCalc = 0, totalStreamingConsumption = 0, totalWatchedHours = 0, fixedFee = 0, contentProtection = 0, first10 = 0, in11to40 = 0, in51to100 = 0, above100 = 0 ;
     float ivaAmount = 0.0, totalToPay = 0.0, totalToPayWithIVA = 0.0, total = 0.0, total1 = 0.0, total2 = 0.0, total3 = 0.0;
-    string iva, returnToMenu, fullName;
+    string ivaYesNo, returnToMenu, fullName;
     bool condition;
 
     do
@@ -59,7 +73,7 @@ int main()
             cout << "              Data entry in the system              " << endl;
 
             string clientID_string;
-            string meter_string;
+            string invoice_string;
 
             // Client ID number provided during service purchase
             cout << "Enter the customer ID number (must be 9 digits, example: 123456789): " << endl;
@@ -85,6 +99,25 @@ int main()
             cout << "Enter the service owner's full name: " << endl;
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             getline(cin, fullName);
+
+            // Invoice number
+            cout << "Insert the invoice number of your streaming service(6 digits): "<<endl;
+            cin >> invoice;
+
+            invoice_string = to_string(invoice);
+
+            while (invoice_string.length() != 6 || !isNumber(invoice_string))
+            {
+                cout << "The invoice is invalid, try again (Example: 123456)!" << endl;
+
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                cout << "Insert the invoice number (6 digits): " << endl;
+                cin >> invoice;
+
+                invoice_string = to_string(invoice);
+            }
 
             // Number of hours watched
             cout << "Enter the number of hours watched during the month: ";
@@ -129,18 +162,17 @@ int main()
 
             // Calculate the total for all additional hours consumed
             totalStreamingConsumption += total + total1 + total2 + total3;
-            cout << "Consumption: " << totalStreamingConsumption << "$"<< endl;
 
             while (true)
             {
                 cout << "Are you exempt from IVA (taxes)? (Y/N): ";
-                cin >> iva;
+                cin >> ivaYesNo;
 
-                if (iva == "Y" || iva == "y")
+                if (ivaYesNo == "Y" || ivaYesNo == "y")
                 {
                     break;
                 }
-                else if (iva == "N" || iva == "n")
+                else if (ivaYesNo == "N" || ivaYesNo == "n")
                 {
                     break;
                 }
@@ -177,18 +209,19 @@ int main()
 
                 totalToPay = fixedFee + contentProtection + totalStreamingConsumption;
 
-                if (iva == "N" || iva == "n")
+                if (ivaYesNo == "N" || ivaYesNo == "n")
                 {
                     totalToPayWithIVA = totalToPay * 1.13;
                     ivaAmount = totalToPay * 0.13;
                     totalToPay += totalToPayWithIVA;
                 }
-                else if (iva == "Y" || iva == "y")
+                else if (ivaYesNo == "Y" || ivaYesNo == "y")
                 {
                     ivaAmount = 0;
                     totalToPayWithIVA = totalToPay + ivaAmount;
                 }
-
+                // calling the function with the code
+                int numberRandom = RandomNumber();
                 // Invoice presentation
                 cout << "              Streaming Consumption Invoice              " << endl;
                 cout << "Client ID:                    " << clientID << endl;
@@ -201,6 +234,7 @@ int main()
                 cout << "Additional consumption:       " << "$"<< totalStreamingConsumption << endl;
                 cout << "Taxes:                        " << "$"<< ivaAmount << endl;
                 cout << "TOTAL to pay in dollars:      " << "$"<< totalToPayWithIVA << endl;
+                cout << "Code to complete payment:     " << numberRandom << endl;
                 cout << " " << endl;
                 while (true)
                 {
