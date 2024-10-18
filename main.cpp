@@ -29,13 +29,12 @@ int main()
 
     SetConsoleCP(1252);
     SetConsoleOutputCP(1252);
-    setlocale(LC_ALL,"Spanish");10 = 0, in11to40 = 0, in51to100 = 0, above100 = 0;
+    setlocale(LC_ALL,"Spanish");
+    int clientID = 0, menu = 0, totalWatchedHoursCalc = 0, totalStreamingConsumption = 0, totalWatchedHours = 0, fixedFee = 0, contentProtection = 0, first10 = 0, in11to40 = 0, in51to100 = 0, above100 = 0 ;
     float ivaAmount = 0.0, totalToPay = 0.0, totalToPayWithIVA = 0.0, total = 0.0, total1 = 0.0, total2 = 0.0, total3 = 0.0;
     string iva, returnToMenu, fullName;
     bool condition;
 
-
-    int clientID = 0, menu = 0, totalWatchedHoursCalc = 0, totalStreamingConsumption = 0, totalWatchedHours = 0, fixedFee = 0, contentProtection = 0, first
     do
     {
 
