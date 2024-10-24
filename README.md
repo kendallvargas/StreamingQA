@@ -19,7 +19,7 @@ The user is asked for these details:<br/>
 
 ### ⚙️ **Conditions to be met in the execution of the code**
 ❖ The menu repeats until a correct option is entered (invalid: incorrect letters or numbers).<br/>
-❖ Customer ID must not allow letters or numbers other than 9.<br/>
+❖ Client ID must not allow letters or numbers other than 9.<br/>
 ❖ Invoice number must not allow letters or numbers other than 6.<br/>
 ❖ Total hours viewed must not allow letters or numbers less than 0 or greater than 720.<br/>
 ❖ The tax menu repeats until a correct letter is entered.<br/>
@@ -28,8 +28,8 @@ The user is asked for these details:<br/>
 
 ### 💰 **Logic of calculation for the final price**
 There are already 2 fixed payments each month, which are:<br/>
-fixedFee: 10 USD<br/>
-contentProtection: 5 USD
+- fixedFee: 10 USD<br/>
+- contentProtection: 5 USD
 
 The streaming hour has a fixed price of 2 USD per hour. For the additional hourly charge, it works as follows:<br/>
 The first 10 hours have no additional charges.<br/>
@@ -40,7 +40,7 @@ The first 10 hours have no additional charges.<br/>
 For the tax price, it is 13% of the final total price of the payment. This is if the client is not exempt from taxes, if they are exempt, this additional price is not added.
 
 ### 🧪 **Test Plan**
-For the correct delivery of this C++ project, I need to test all the code and validate it worked correctly based on the project requirements. <br/>
+For the correct delivery of this C++ project, I need to test all the code and validate it worked correctly based on the project requirements. <br/><br/>
 📄 Test Plan Document: PDF PDF PDF
 
 ### 📚**Test Cases**
