@@ -226,6 +226,7 @@ int main()
                 cout << "              Streaming Consumption Invoice              " << endl;
                 cout << "Client ID:                    " << clientID << endl;
                 cout << "Client Name:                  " << fullName << endl;
+                cout << "Client's invoice number:      "<< invoice <<endl;
                 cout << "Hours watched this month:     " << totalWatchedHoursCalc << endl;
                 cout << " " << endl;
                 cout << "              Invoice Details              " << endl;
