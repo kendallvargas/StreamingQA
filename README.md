@@ -59,9 +59,9 @@ Another way to access the links of the bugs directly from the Test Cases is to d
 git clone https://github.com/kendallvargas/StreamingQA.git
 ```
 
-**Go to the project location and open the 'main' file** 📂
+- Go to the project location and open the 'main' file 📂
 
-**Build and Run** ▶️
+- Build and Run ▶️
 
 ### 📹 **Example of a normal end-to-end flow in the system:**
 
