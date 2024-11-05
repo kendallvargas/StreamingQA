@@ -41,10 +41,10 @@ For the tax price, it is 13% of the final total price of the payment. This is if
 
 ### 🧪 **Test Plan**
 For the correct delivery of this C++ project, I need to test all the code and validate it worked correctly based on the project requirements. <br/><br/>
-📄 Test Plan Document: PDF PDF PDF
+📄 Test Plan Document: [Test_Plan](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Plan.pdf)
 
 ### 📚**Test Cases**
-📄 Test Case Document: PDF PDF PDF
+📄 Test Case Document: [Test_Case](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming.pdf)
 
 ### 🔧 **Reference for setting up C++ on Windows with VS code:**
 - Set up [C++](https://code.visualstudio.com/docs/languages/)
