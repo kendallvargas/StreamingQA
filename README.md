@@ -63,3 +63,8 @@ cd StreamingQA
 ```
 
 **Build and Run** ▶️
+
+### **Example of a normal end-to-end flow in the system: **
+
+https://github.com/user-attachments/assets/7cbee255-267f-4713-8f87-8531d1784a96
+
