@@ -59,10 +59,7 @@ Another way to access the links of the bugs directly from the Test Cases is to d
 git clone https://github.com/kendallvargas/StreamingQA.git
 ```
 
-**Go to project location** 📂
-```bash
-cd StreamingQA
-```
+**Go to the project location and open the 'main' file** 📂
 
 **Build and Run** ▶️
 
