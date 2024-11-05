@@ -45,6 +45,8 @@ For the correct delivery of this C++ project, I need to test all the code and va
 
 ### 📚**Test Cases**
 📄 Test Case Document: [Test_Case](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming.pdf)
+The reporting of the bugs is documented using Notion, here is the link to view the reports: [backlog](https://kendallvargas.notion.site/Streaming-Project-Bug-Report-List-129a2534d25a80d5bee2f764a4ffb6b2)
+Another way to access the links of the bugs directly from the Test Cases is to download the PDF of the TC from the folder >>> [here](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming.pdf).
 
 ### 🔧 **Reference for setting up C++ on Windows with VS code:**
 - Set up [C++](https://code.visualstudio.com/docs/languages/)
