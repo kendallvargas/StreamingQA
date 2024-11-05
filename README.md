@@ -6,7 +6,7 @@
 The C++ code consists of a short system that calculates the total amount to be paid based on hours watched on a streaming platform.
 
 The main menu consists of 3 options: <br/>
-1️⃣ First, enter the data and information so that the system calculates the amount<br/>
+1️⃣ First, enter the data and information so that the system calculates the amount.<br/>
 2️⃣ The second, show on a receipt all the required data based on what was entered on menu 1.<br/>
 3️⃣ The third, close the system.<br/>
 
@@ -40,11 +40,11 @@ The first 10 hours have no additional charges.<br/>
 For the tax price, it is 13% of the final total price of the payment. This is if the client is not exempt from taxes, if they are exempt, this additional price is not added.
 
 ### 🧪 **Test Plan**
-For the correct delivery of this C++ project, I need to test all the code and validate it worked correctly based on the project requirements. <br/><br/>
+For the correct delivery of this C++ project, I need to test all the code and validate it works correctly based on the project requirements. <br/><br/>
 📄 Test Plan Document: [Test_Plan](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Plan.pdf)
 
 ### 📚**Test Cases**
-📄 Test Case Document: [Test_Case](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming.pdf) <br/>
+📄 Test Case Document: [Test_Case](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming.pdf) <br/> <br/>
 The reporting of the bugs is documented using Notion, here is the link to view the reports: [backlog](https://kendallvargas.notion.site/Streaming-Project-Bug-Report-List-129a2534d25a80d5bee2f764a4ffb6b2)<br/>
 Another way to access the links of the bugs directly from the Test Cases is to download the PDF of the TC from the folder >>> [here](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming.pdf).
 
