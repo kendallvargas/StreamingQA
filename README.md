@@ -33,11 +33,12 @@ There are already 2 fixed payments each month, which are:<br/>
 
 The streaming hour has a fixed price of 2 USD per hour. For the additional hourly charge, it works as follows:<br/>
 The first 10 hours have no additional charges.<br/>
-❖ After 10 to 40 hours consumed, an additional 10% is applied to the final price.<br/>
-❖ From 51 to 100 hours, 20% is applied to the final price.<br/>
-❖ And above 100 hours, 30% is applied to the final price.
+❖ Category 1: The first 10 hours have no additional charges.<br/>
+❖ Category 2: After 10 to 50 hours consumed, an additional 10% is applied to the final price + the price of the first 10 hours consumed.<br/>
+❖ Category 3: From 51 to 100 hours, the price of the first 10 hours consumed + 10% of the previous 40 hours, and 20% is applied to the final price based on the hours consumed in this category.<br/>
+❖ Category 4: Above 100 hours, the price of the first 10 hours consumed(first category) + 10% of the previous 40 hours (second category) + 20% of the third category + 30% applied to the hours above 100 hours. <br/><br/>
 
-For the tax price, it is 13% of the final total price of the payment. This is if the client is not exempt from taxes, if they are exempt, this additional price is not added.
+The tax price is 13% of the final total payment price. If the client is exempt from taxes, this additional price is not added.<br/>
 
 ### 🧪 **Test Plan**
 For the correct delivery of this C++ project, I need to test all the code and validate it works correctly based on the project requirements. <br/><br/>
@@ -49,7 +50,7 @@ The reporting of the bugs is documented using Notion, here is the link to view t
 Another way to access the links of the bugs directly from the Test Cases is to download the PDF of the TC from the folder >>> [here](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming.pdf).
 
 ### 🔧 **Reference for setting up C++ on Windows with VS code:**
-- Set up [C++](https://code.visualstudio.com/docs/languages/)
+- Set up [C++](https://code.visualstudio.com/docs/languages/cpp)
 
 ### 🚀 **Instructions for running the code locally:**
 - Install a git client such as [git bash](https://git-scm.com/downloads).
