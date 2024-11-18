@@ -32,7 +32,6 @@ There are already 2 fixed payments each month, which are:<br/>
 - contentProtection: 5 USD
 
 The streaming hour has a fixed price of 2 USD per hour. For the additional hourly charge, it works as follows:<br/>
-The first 10 hours have no additional charges.<br/>
 ❖ Category 1: The first 10 hours have no additional charges.<br/>
 ❖ Category 2: After 10 to 50 hours consumed, an additional 10% is applied to the final price + the price of the first 10 hours consumed.<br/>
 ❖ Category 3: From 51 to 100 hours, the price of the first 10 hours consumed + 10% of the previous 40 hours, and 20% is applied to the final price based on the hours consumed in this category.<br/>
