@@ -36,7 +36,7 @@ The first 10 hours have no additional charges.<br/>
 ❖ Category 1: The first 10 hours have no additional charges.<br/>
 ❖ Category 2: After 10 to 50 hours consumed, an additional 10% is applied to the final price + the price of the first 10 hours consumed.<br/>
 ❖ Category 3: From 51 to 100 hours, the price of the first 10 hours consumed + 10% of the previous 40 hours, and 20% is applied to the final price based on the hours consumed in this category.<br/>
-❖ Category 4: Above 100 hours, the price of the first 10 hours consumed(first category) + 10% of the previous 40 hours (second category) + 20% of the third category + 30% applied to the hours above 100 hours. <br/><br/>
+❖ Category 4: Above 100 hours, the price of the first 10 hours consumed(first category) + 10% of the previous 40 hours (second category) + 20% of the third category + 30% applied to the hours above 100 hours. <br/>
 
 The tax price is 13% of the final total payment price. If the client is exempt from taxes, this additional price is not added.<br/>
 
