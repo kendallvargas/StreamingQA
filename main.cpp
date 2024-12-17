@@ -133,7 +133,7 @@ int RandomNumber()
 void Menu()
 {
 
-    cout << "Welcomes!" << endl;
+    cout << "Welcome!" << endl;
     cout << "" << endl;
 
     cout << "1. Enter streaming usage data for the month" << endl;
@@ -387,6 +387,7 @@ void returnMenu()
 // Function with regex to validate that a string only includes letter from A to Z and spaces
 bool isValidName(const string &name)
 {
-    regex nameRegex("^[a-zA-Z\\s]+$");
+    // including special code for the characters: Áá Éé Íí Óó Úú Ññ Üü
+    regex nameRegex("^(?=.*[a-zA-Z])[a-zA-Z\\s\\u00f1\\u00d1\\u00c1\\u00c9\\u00cd\\u00d3\\u00da\\u00e1\\u00e9\\u00ed\\u00f3\\u00fa\\u00fc\\u00dc]+$");
     return regex_match(name, nameRegex);
 }
