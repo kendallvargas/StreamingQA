@@ -9,7 +9,6 @@
 
 using namespace std;
 
-bool isNumber(string str);
 void clearScreen();
 int RandomNumber();
 void Menu();
@@ -104,16 +103,6 @@ int main()
     } while (menu != 3 || cin.fail());
 
     return 0;
-}
-
-bool isNumber(string str)
-{
-    for (char c : str)
-    {
-        if (!isdigit(c))
-            return false;
-    }
-    return true;
 }
 
 void clearScreen()
@@ -379,15 +368,15 @@ bool isValidName(const string &name)
 // Function with regex to validate that a string can only accept numbers from 1 to 3
 bool isValidMenuInput(const string &input)
 {
-    std::regex inputRegex("^[1-3]$");
-    return std::regex_match(input, inputRegex);
+    regex inputRegex("^[1-3]$");
+    return regex_match(input, inputRegex);
 }
 
 // Function with regex to validate that the string can only accept Yy or Nn character
 bool isValidYesNoInput(const string &yesNo)
 {
-    std::regex yesNoRegex("^[YyNn]$");
-    return std::regex_match(yesNo, yesNoRegex);
+    regex yesNoRegex("^[YyNn]$");
+    return regex_match(yesNo, yesNoRegex);
 }
 
 // Regex to validate ID has only 9 digits from 0-9
