@@ -20,6 +20,11 @@ void calculation();
 void wholeCalculation();
 void generateInvoice();
 bool isValidName(const string &name);
+bool isValidMenuInput(const string &input);
+bool isValidYesNoInput(const string &yesNo);
+bool isValidID(const string &id);
+bool isValidInvoice(const string &invoice);
+bool areValidHours(const string &hours);
 
 // Structure used for the invoice Creation and access the data
 struct InvoiceData
@@ -47,6 +52,7 @@ string menuInput;
 
 int main()
 {
+    system("title Streaming Project - Kendall Vargas");
 
     SetConsoleCP(1252);
     SetConsoleOutputCP(1252);
@@ -132,27 +138,34 @@ int RandomNumber()
 
 void Menu()
 {
-
-    cout << "Welcome!" << endl;
-    cout << "" << endl;
-
-    cout << "1. Enter streaming usage data for the month" << endl;
-
-    cout << "2. Generate the monthly bill for streaming service" << endl;
-
-    cout << "3. Exit the Program" << endl;
-
-    cin >> menuInput;
-    cin.clear();
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-    while (menuInput.length() != 1)
+    while (true)
     {
-        cout << "Only 1 character is allowed! Try again: ";
-        getline(cin, menuInput);
-    }
-    menu = stoi(menuInput);
 
+        cout << "Welcome!" << endl;
+        cout << "" << endl;
+
+        cout << "1. Enter streaming usage data for the month" << endl;
+
+        cout << "2. Generate the monthly bill for streaming service" << endl;
+
+        cout << "3. Exit the Program" << endl;
+
+        getline(cin, menuInput);
+        // using the Regex to validate if the number inserted matches the validation
+        if (isValidMenuInput(menuInput))
+        {
+            // if the number inserted is correct, it will be converted to a number to use it on the switch method in the int function.
+            menu = stoi(menuInput);
+            break;
+        }
+        else
+        {
+            // if the number is invalid, it will retrieve this error and display the menu again
+            cout << "Input is incorrect, please try again!\n";
+            system("pause");
+            clearScreen();
+        }
+    }
 }
 
 void DataEntry()
@@ -163,20 +176,20 @@ void DataEntry()
 
     // Client ID number
     cout << "Enter the customer ID number (must be 9 digits, example: 123456789): " << endl;
-    cin >> info.clientID;
+    getline(cin, info.clientID);
 
-    while (info.clientID.length() != 9 || !isNumber(info.clientID))
+    // If the number does not match the regular expression, it will enter and request the ID number again.
+    while (!isValidID(info.clientID))
     {
         cout << "Invalid ID number, please try again!" << endl;
 
         // Prompt for input again in case it fails
         cout << "Re-enter the customer ID number (9 digits): " << endl;
-        cin >> info.clientID;
+        getline(cin, info.clientID);
     }
 
     // SERVICE OWNER'S FULL NAME
     cout << "Enter the service owner's full name: " << endl;
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
     getline(cin, info.fullName);
     while (!isValidName(info.fullName))
     {
@@ -187,52 +200,30 @@ void DataEntry()
 
     // Invoice number
     cout << "Insert the invoice number of your streaming service(6 digits): " << endl;
-    cin >> info.invoice;
+    getline(cin, info.invoice);
 
-    while (info.invoice.length() != 6 || !isNumber(info.invoice))
+    // If the number does not match the regular expression, it will enter and request the invoice number again.
+    while (!isValidInvoice(info.invoice))
     {
         cout << "The invoice is invalid, try again (Example: 123456)!" << endl;
-
         cout << "Insert the invoice number (6 digits): " << endl;
-        cin >> info.invoice;
+        getline(cin, info.invoice);
     }
 
     // Number of hours watched
-    cout << "Enter the number of hours watched during the month: ";
-    cin >> info.totalWatchedHoursCalc;
+    cout << "Enter the number of hours watched during the month(1-720): ";
+    getline(cin, info.totalWatchedHoursCalc);
 
-    // Validate the input
-    while (!isNumber(info.totalWatchedHoursCalc))
+    // If the number does not match the regular expression, it will enter and request the number of hours again.
+    while (!areValidHours(info.totalWatchedHoursCalc))
     {
-        cout << "Invalid input. Please enter a valid number." << endl;
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "Re-enter the number of hours watched: ";
-        cin >> info.totalWatchedHoursCalc;
+        cout << "Invalid input. Please enter a valid number: ";
+        getline(cin, info.totalWatchedHoursCalc);
     }
 
     // Convert to integer after validation
     int totalHours;
     totalHours = stoi(info.totalWatchedHoursCalc);
-
-    // Validation based on the limits
-    while (totalHours <= 0 || totalHours > 720)
-    {
-        cout << "Number of hours out of range (0-720)" << endl;
-        cout << "Re-enter the number of hours watched: ";
-        cin >> info.totalWatchedHoursCalc;
-
-        // Validate the input again
-        while (!isNumber(info.totalWatchedHoursCalc))
-        {
-            cout << "Invalid input. Please enter a valid number." << endl;
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Re-enter the number of hours watched: ";
-            cin >> info.totalWatchedHoursCalc;
-        }
-    }
-
     // Store the valid total hours again
     info.totalWatchedHours = totalHours;
 }
@@ -329,32 +320,24 @@ void generateInvoice()
 // Menu for the validation if the user is excempt from IVA or not
 void excemptIva()
 {
-
     while (true)
     {
         cout << "Are you exempt from IVA (taxes)? (Y/N): ";
-        cin >> ivaYesNo;
-        if (ivaYesNo.length() == 1)
+        getline(cin, ivaYesNo);
+        /* If it is valid, it will move to the next section
+           if it is invalid, it will repeat the same question and show the error message */
+        if (isValidYesNoInput(ivaYesNo))
         {
-
-            if (ivaYesNo == "Y" || ivaYesNo == "y")
-            {
-                break;
-            }
-            else if (ivaYesNo == "N" || ivaYesNo == "n")
-            {
-                break;
-            }
+            break;
         }
         else
         {
-            cout << "Response cannot be longer than one character!\n";
-            continue;
+            cout << "Input is incorrect, please try again!\n";
         }
     }
 }
 
-// Return to the menu function, separating it from the
+// Return to the menu function
 void returnMenu()
 {
     string returnToMenu;
@@ -362,10 +345,10 @@ void returnMenu()
     while (true)
     {
         cout << "Do you want to return to the main menu? (Y/N): ";
-        cin >> returnToMenu;
-        if (returnToMenu.length() == 1)
+        getline(cin, returnToMenu);
+        // If it matches the regular expression, it will enter the conditional statement.
+        if (isValidYesNoInput(returnToMenu))
         {
-
             if (returnToMenu == "N" || returnToMenu == "n")
             {
                 continue;
@@ -378,7 +361,8 @@ void returnMenu()
         }
         else
         {
-            cout << "Response cannot be longer than one character!\n";
+            // error message and will display the question again.
+            cout << "Input is incorrect, please try again!\n";
             continue;
         }
     }
@@ -390,4 +374,39 @@ bool isValidName(const string &name)
     // including special code for the characters: Áá Éé Íí Óó Úú Ññ Üü
     regex nameRegex("^(?=.*[a-zA-Z])[a-zA-Z\\s\\u00f1\\u00d1\\u00c1\\u00c9\\u00cd\\u00d3\\u00da\\u00e1\\u00e9\\u00ed\\u00f3\\u00fa\\u00fc\\u00dc]+$");
     return regex_match(name, nameRegex);
+}
+
+// Function with regex to validate that a string can only accept numbers from 1 to 3
+bool isValidMenuInput(const string &input)
+{
+    std::regex inputRegex("^[1-3]$");
+    return std::regex_match(input, inputRegex);
+}
+
+// Function with regex to validate that the string can only accept Yy or Nn character
+bool isValidYesNoInput(const string &yesNo)
+{
+    std::regex yesNoRegex("^[YyNn]$");
+    return std::regex_match(yesNo, yesNoRegex);
+}
+
+// Regex to validate ID has only 9 digits from 0-9
+bool isValidID(const string &id)
+{
+    regex idRegex("^[0-9]{9}$");
+    return regex_match(id, idRegex);
+}
+
+// Regex for a numeric Invoice to match 6 digits length
+bool isValidInvoice(const string &invoice)
+{
+    regex invoiceRegex("^[0-9]{6}$");
+    return regex_match(invoice, invoiceRegex);
+}
+
+// Regex for the hours value, 1-720 allowed
+bool areValidHours(const string &hours)
+{
+    regex hoursRegex("^(?:[1-9]|[1-9][0-9]|[1-6][0-9]{2}|7[0-1][0-9]|720)$");
+    return regex_match(hours, hoursRegex);
 }
