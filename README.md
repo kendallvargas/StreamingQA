@@ -44,7 +44,7 @@ For the correct delivery of this C++ project, I need to test all the code and va
 📄 Test Plan Document: [Test_Plan](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Plan.pdf)
 
 ### 📚**Test Cases**
-Since this project required multiple bug fixes and bug commits, I had to perform regression testing on those test cases; the first link is the initial test case and the ones called 'Regression' are the ones run after each fix submission.
+Since this project required multiple bug fixes and bug commits, I had to perform regression testing on those test cases; the first link is the initial test case and the ones called 'Regression' are the ones run after each fix submission. <br/> 
 📄 Test Case Document: [Test_Case](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming.pdf) <br/> 
 📄 Test Case Regression 1: [Test_Case_Regression1](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming_Regression1.pdf) <br/> 
 📄 Test Case Regression 2: [Test_Case_Regression2](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming_Regression2.pdf) <br/> <br/> 
