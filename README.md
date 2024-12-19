@@ -31,8 +31,7 @@ The streaming hour has a fixed price of 2 USD per hour. For the additional hourl
 The tax price is 13% of the final total payment price. If the client is exempt from taxes, this additional price is not added.<br/>
 
 ### **Structure of the code**
-For additional information on the code logic, requirements, processes used, and more, I created a document about all the work behind this project: <br/><br/>
-[Code Documentation](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Plan.pdf)
+For additional information on the code logic, requirements, processes used, and more, I created a document about all the work behind this project: 📋 [Code Documentation](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Streaming_Calculator_Documentation.pdf)
 
 ### 🧪 **Test Plan**
 For the correct delivery of this C++ project, I need to test all the code and validate it works correctly based on the project requirements. <br/><br/>
