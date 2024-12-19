@@ -25,39 +25,38 @@ The streaming hour has a fixed price of 2 USD per hour. For the additional hourl
 
 The tax price is 13% of the final total payment price. If the client is exempt from taxes, this additional price is not added.<br/>
 
-#### **Structure of the code**
+#### 📁 **Structure of the code**
 For additional information on the code logic, requirements, processes used, and more, I created a document about all the work behind this project: 📋 [Code Documentation](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Streaming_Calculator_Documentation.pdf)
 
-### **Quality Assurance Highlights**
+### 📊 **Quality Assurance Highlights**
 
 #### 🧪 **Test Plan**
-To ensure the functionality and robustness of this system, I applied comprehensive QA strategies:  <br/><br/>
+To ensure the functionality and robustness of this system, I applied comprehensive QA strategies:  <br/>
 
 - Created a Test Plan that outlined the scope, objectives, and testing approach for the system: 📄 [Test_Plan](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Plan.pdf)
-- Defined Test Cases to validate both functional and edge-case scenarios.
 
-#### **Testing Techniques:**
+#### ☣️ **Testing Techniques:**
 
 - Black-Box Testing: Focused on verifying the system's input-output behavior, with Boundary Value Analysis.
 - Experience-Based Techniques: Conducted Exploratory Testing to uncover unexpected behaviors and edge cases, providing valuable insights beyond predefined test cases.
 - Static Analysis/Testing: Reviewed the code to ensure there was no dead code, unused functions, or variables.
 
-#### 📚**Test Cases**
+#### 📚 **Test Cases**
 Defined Test Cases to validate both functional and edge-case scenarios. <br/>
 Test cases named 'Regression' represent the test cases executed after each bug fix iteration was submitted.
 - 📄 [Test Case Document](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming.pdf) <br/> 
 - 📄 [Test Case Regression 1](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming_Regression1.pdf) <br/> 
 - 📄 [Test Case Regression 2](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming_Regression2.pdf) <br/> <br/> 
 
-#### **Defect Life Cycle:**
+#### 🐞 **Defect Life Cycle:**
 
 - Identified issues during test case execution, reported them systematically and fixed the issues: The reporting of the bugs is documented using Notion, here is the link to view the reports: ⛓️ [Backlog](https://kendallvargas.notion.site/Streaming-Project-Bug-Report-List-129a2534d25a80d5bee2f764a4ffb6b2)<br/>
 - Conducted retest and regression testing to confirm fixes and ensure no new issues were introduced.
 
-### 🔧 **Reference for setting up C++ on Windows with VS code:**
+#### 🔧 **Reference for setting up C++ on Windows with VS code:**
 - Set up [C++](https://code.visualstudio.com/docs/languages/cpp)
 
-### 🚀 **Instructions for running the code locally:**
+#### 🚀 **Instructions for running the code locally:**
 - Install a git client such as [git bash](https://git-scm.com/downloads).
 
 **Clone the repository:** 📥
@@ -69,7 +68,7 @@ git clone https://github.com/kendallvargas/StreamingQA.git
 
 - Build and Run ▶️
 
-### 📹 **Example of a normal end-to-end flow in the system:**
+#### 📹 **Example of a normal end-to-end flow in the system:**
 
 https://github.com/user-attachments/assets/7cbee255-267f-4713-8f87-8531d1784a96
 
