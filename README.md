@@ -17,15 +17,6 @@ The user is asked for these details:<br/>
 - Number of hours watched on the platform<br/>
 - If it is exempt from taxes
 
-### ⚙️ **Conditions to be met in the execution of the code**
-❖ The menu repeats until a correct option is entered (invalid: incorrect letters or numbers).<br/>
-❖ Client ID must not allow letters or numbers other than 9.<br/>
-❖ Invoice number must not allow letters or numbers other than 6.<br/>
-❖ Total hours viewed must not allow letters or numbers less than 0 or greater than 720.<br/>
-❖ The tax menu repeats until a correct letter is entered.<br/>
-❖ The return to the main menu repeats until a correct letter is entered.<br/>
-❖ Important: You cannot access option 2 without having gone through option 1.
-
 ### 💰 **Logic of calculation for the final price**
 There are already 2 fixed payments each month, which are:<br/>
 - fixedFee: 10 USD<br/>
@@ -39,12 +30,16 @@ The streaming hour has a fixed price of 2 USD per hour. For the additional hourl
 
 The tax price is 13% of the final total payment price. If the client is exempt from taxes, this additional price is not added.<br/>
 
+### **Structure of the code**
+For additional information on the code logic, requirements, processes used, and more, I created a document about all the work behind this project: <br/><br/>
+[Code Documentation](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Plan.pdf)
+
 ### 🧪 **Test Plan**
 For the correct delivery of this C++ project, I need to test all the code and validate it works correctly based on the project requirements. <br/><br/>
 📄 Test Plan Document: [Test_Plan](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Plan.pdf)
 
 ### 📚**Test Cases**
-Since this project required multiple bug fixes and bug commits, I had to perform regression testing on those test cases; the first link is the initial test case and the ones called 'Regression' are the ones run after each fix submission. <br/> 
+Since this project required multiple bug fixes and bug commits, I had to perform regression testing on those test cases; the first link is the initial test case and the ones called 'Regression' are the ones run after each fix submission. <br/> <br/> 
 📄 Test Case Document: [Test_Case](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming.pdf) <br/> 
 📄 Test Case Regression 1: [Test_Case_Regression1](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming_Regression1.pdf) <br/> 
 📄 Test Case Regression 2: [Test_Case_Regression2](https://github.com/kendallvargas/StreamingQA/blob/master/QA%20Section/Test_Cases_Streaming_Regression2.pdf) <br/> <br/> 
